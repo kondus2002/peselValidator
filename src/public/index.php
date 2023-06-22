@@ -13,9 +13,10 @@ require '../vendor/autoload.php';
 
 $path = "/iwq/src/public";
 
-$config['displayErrorDetails'] = true; // only in dev mode
-$config['addContentLengthHeader'] = false;
+//$config['displayErrorDetails'] = true; // only in dev mode
+//$config['addContentLengthHeader'] = false;
 
+//DB CONFIG
 $config['db']['host']   = 'localhost';
 $config['db']['user']   = 'root';
 $config['db']['pass']   = '';
