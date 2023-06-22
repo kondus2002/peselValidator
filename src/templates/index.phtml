@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PESEL Validator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="mt-5">Pesel Validator</h1>
+        <form method="post" action="/iwq/src/public/submit">
+            <div class="form-group">
+                <label for="pesel">PESEL:</label>
+                <input type="number" class="form-control" id="pesel" name="pesel" placeholder="Wpisz numer PESEL">
+            </div>
+            <button type="submit" class="btn btn-primary" name="sprawdz">Sprawdź PESEL</button>
+            <a href="/iwq/src/public/employees" class="btn btn-secondary">Lista pracowników</a>
+        </form>
+    </div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

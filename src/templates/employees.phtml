@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></head>
+<body>
+
+<div class="container">
+    <h1 class="mt-5">Employee List</h1>
+    <table class="table mt-4">
+        <thead>
+        <tr>
+            <th scope="col">Imię</th>
+            <th scope="col">Nazwisko</th>
+            <th scope="col">Płeć</th>
+            <th scope="col">Data urodzenia</th>
+            <th scope="col">PESEL</th>
+            <th scope="col">Adres</th>
+            <th scope="col">Akcje</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+
+        foreach ($data as $person){
+
+            echo "<tr>";
+
+            echo "<td>" . $person['firstName'] . "</td>";
+            echo "<td>" . $person['lastName'] . "</td>";
+            echo "<td>" . $person['gender'] . "</td>";
+            echo "<td>" . $person['birthday'] . "</td>";
+            echo "<td>" . $person['pesel'] . "</td>";
+            echo "<td>" . $person['address'] . "</td>";
+            echo "<td><a href='employee/update/" . $person['pesel'] . "'><button class='btn btn-primary btn-sm'>Aktualizuj</button></a>";
+            echo "<form method='post' action='/iwq/src/public/employee/delete/" . $person['pesel'] . "'><input type='submit' value='Usuń' class='btn btn-danger btn-sm'></form></td>";
+
+            echo "</tr>";
+        }
+
+        ?>
+        </tbody>
+    </table>
+
+    <div class="mt-4">
+        <a href="employee/add" class="btn btn-success">Dodaj Pracownika</a>
+        <a href="/iwq/src/public" class="btn btn-info">Pesel Validator</a>
+    </div>
+
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

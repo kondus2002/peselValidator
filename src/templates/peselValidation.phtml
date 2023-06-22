@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PESEL Validator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="mt-5">Pesel Validator</h1>
+    <?php
+
+    if($result == true) {
+        echo '<div class="alert alert-success mt-4" role="alert">Podany numer PESEL jest prawidłowy.';
+    } else {
+        echo '<div class="alert alert-danger mt-4" role="alert">Podany numer PESEL jest nieprawidłowy.';
+    }
+
+    ?>
+    </div>
+    <a href="/iwq/src/public" class="btn btn-primary mt-3">Powrót</a>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
